@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+       // let a = 1;
+      //  const b = 2;
+     //  console.log(b);
+        let oJson = {a:1,b:2,c:3};
+        let oArray = [4,5,6];
+        let {a,b,k} = oJson;
+        let [d,e,f] = oArray;
+       // console.log(a,b,k);
+      //  console.log(d,e,f);
+        let oAaary2 = [1,...oArray]
+        let [kk,...m] = oArray;
+        console.log(kk,m);
+        console.log(oAaary2);
+
+        function aa(mm){
+            console.log(mm);
+        }
+        aa(1);
+
+    function reversetest(x) {
+                let ret = 0;
+                while (x != 0) {
+                    ret = 10 * ret + parseInt(x % 10);
+                    x = parseInt(x/10);
+                }
+                if (ret > 2147483647 || ret < -2147483648) {
+                    return 0;
+                } else {
+                    return ret;
+                }
+                console.log("1231232")
+     }
+    // reversetest(123);
+    
+     //I 可以放在 V(5) 和 X(10) 的左边，来表示 4 和 9。
+    //X 可以放在 L(50) 和 C(100) 的左边，来表示 40 和 90。 
+    //C 可以放在 D(500) 和 M(1000) 的左边，来表示 400 和 900。
+    //给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。
+    
+    function romanToInt1(s) {
+        let ret=0;
+    const map ={
+        I : 1,
+        IV: 4,
+        V: 5,
+        IX: 9,
+        X: 10,
+        XL: 40,
+        L: 50,
+        XC: 90,
+        C: 100,
+        CD: 400,
+        D: 500,
+        CM: 900,
+        M: 1000
+    };
+    for(var i=0;i<s.length;i++){
+        if((i+1)<s.length && map[s.substring(i,i+2)]){
+            ret = ret+map[s.substring(i,i+2)];
+            i=i+1;
+        }else{
+            ret = ret+map[s.substring(i,i+1)]
+        }
+    }
+    return ret;
+    };
+
+    function romanToInt(s) {
+    let ret=0;
+    const map ={
+        I : 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+    for(var i=0;i<s.length;i++){
+        if(map[s[i]]<map[s[i+1]]){
+            ret = ret-map[s[i]]
+        }else{
+            ret = ret+map[s[i]]
+        }
+    }
+    return ret;
+    };
+   // romanToInt("MMMCMXCIX");
+
+    var longestCommonPrefix = function (strs) {
+        //方法一横向比较
+        // if (strs.length === 0 || strs === undefined) {
+        //     return "";
+        // }
+        // let ret = strs[0];
+        // for (var i =1; i < strs.length; i++) {
+        //     var j = 0;
+        //     for (; j < ret.length; j++) {
+        //         if (strs[i].length < j + 1 || ret[j] !== strs[i][j]) {
+        //            break;
+        //         }
+        //     }
+        //     ret = ret.substring(0,j);          
+        // }
+        // return ret;
+
+        //方法二纵向比较
+        if(strs.length ===0 ||strs===undefined){
+            return "";
+        }
+        let ret = strs[0];
+        for(var i=0;i<ret.length;i++){
+            for(var j=1;j<strs.length;j++){
+                if(strs[j].length<i  || ret[i] !=strs[j][i]){
+                    return ret.substring(0,i);
+                }
+            }
+        }
+        return ret;
+
+    };
+     //longestCommonPrefix(["dog","racecar","car"]);
+    
+    function isValid(s) {
+     //用堆栈来解决
+     if(s.length%2 !==0){
+         return false;
+     }
+     let newmap = new Map;
+     newmap.set('(',')');
+     newmap.set('[',']');
+     newmap.set('{','}');
+     let newarray = new Array;
+     for(var i=0;i<s.length;++i){
+        if(newmap.has(s[i])){
+            newarray.push(s[i]);
+        }else{
+            if(newarray.length===0 || newmap.get(newarray.pop()) !==s[i]){
+                return false;
+            }
+        }
+     }
+     if(newarray.length >0 ) return false;
+     return true;
+    };
+    alert(isValid("()[]{}"));
+    </script>
+
+    
+    
+</body>
+</html>

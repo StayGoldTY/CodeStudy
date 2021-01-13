@@ -1,0 +1,4 @@
+D:\Code\StudyCode\Casbin学习\bin\Debug\netcoreapp3.1\Casbin学习.exe
+D:\Code\StudyCode\Casbin学习\obj\Debug\netcoreapp3.1\Casbin学习.csprojAssemblyReference.cache
+D:\Code\StudyCode\Casbin学习\obj\Debug\netcoreapp3.1\Casbin学习.AssemblyInfoInputs.cache
+D:\Code\StudyCode\Casbin学习\obj\Debug\netcoreapp3.1\Casbin学习.AssemblyInfo.cs

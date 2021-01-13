@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Casbin.NET/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "DynamicExpresso.Core": "2.3.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetCasbin.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetCasbin.dll": {}
+        }
+      },
+      "DynamicExpresso.Core/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/DynamicExpresso.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DynamicExpresso.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Casbin.NET/1.3.1": {
+      "sha512": "Mgy1toMrLTfZMJNhFAjUwQkrcGYRLZ8y28MtbtFYn3dlkvb0y1mtCZKQBkXVQ8peeDqkd7bsd11TKyozURbrWg==",
+      "type": "package",
+      "path": "casbin.net/1.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "casbin.net.1.3.1.nupkg.sha512",
+        "casbin.net.nuspec",
+        "casbin.png",
+        "lib/net45/NetCasbin.dll",
+        "lib/netstandard2.0/NetCasbin.dll"
+      ]
+    },
+    "DynamicExpresso.Core/2.3.1": {
+      "sha512": "gAoOdAA7KypwC2aEWbm72ZcNj9ERn0GBrFyFrLm9tRZGd+z1rgnKlh+BtWJi9X32ldzOwItY/Ty5ao6CqbG5ig==",
+      "type": "package",
+      "path": "dynamicexpresso.core/2.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dynamicexpresso.core.2.3.1.nupkg.sha512",
+        "dynamicexpresso.core.nuspec",
+        "lib/net45/DynamicExpresso.Core.dll",
+        "lib/net461/DynamicExpresso.Core.dll",
+        "lib/netstandard2.0/DynamicExpresso.Core.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Casbin.NET >= 1.3.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\dell\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Code\\StudyCode\\Casbin学习\\Casbin学习.csproj",
+      "projectName": "Casbin学习",
+      "projectPath": "D:\\Code\\StudyCode\\Casbin学习\\Casbin学习.csproj",
+      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+      "outputPath": "D:\\Code\\StudyCode\\Casbin学习\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "Casbin.NET": {
+            "target": "Package",
+            "version": "[1.3.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

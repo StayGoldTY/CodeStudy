@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"  type="text/javascript"> </script>
+</head>
+<body>
+    <div id = 'test'>
+        <h1>{{msgList}}</h1>
+        <h1>23</h1>
+        <Component-Name v-for = 'item,index in msgList' :Name=item :key="index"></Component-Name>
+    </div>
+
+    <script>
+        Vue.component('ComponentName',{
+            props:['Name'],
+            template:'<li>{{Name.MainContent}},{{Name.AnnouncementDate}}</li>'
+        })
+        
+        var vm = new Vue({
+            el:'#test',
+            data:{
+                msgList:[
+                [{"MainContent":"测试公告一内容","AnnouncementDate":"2019-04-28 00:00:00"},{"MainContent":"测试公告二内容","AnnouncementDate":"2019-04-29 00:00:00"}]
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

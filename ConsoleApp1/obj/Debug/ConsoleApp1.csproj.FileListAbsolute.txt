@@ -1,0 +1,13 @@
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Code\StudyCode\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Code\StudyCode\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Code\StudyCode\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\WpfApp1.exe
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\WpfApp1.pdb
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\WpfApp1.exe.config
+D:\Code\StudyCode\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\Code\StudyCode\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\PresentationFramework.dll
+D:\Code\StudyCode\ConsoleApp1\bin\Debug\WindowsBase.dll

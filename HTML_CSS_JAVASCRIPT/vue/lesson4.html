@@ -1,0 +1,122 @@
+<!--计算属性和监听器 -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"  type="text/javascript"> </script>
+</head>
+<body>
+    <!-- 对于vue来说，设计的初衷是让模板里面的东西尽可能的简洁，
+    所以复杂的东西都应该放到计算属性中来进行处理
+    计算属性可以像 data 对象中的所有的 property一样来被模板直接使用
+    -->
+    <!-- 最重要的一点，vue在声明对应的计算属性的时候已经创建了和对应data属性的依赖关系，当data中的property
+    改变的时候计算属性中的返回值也会改变 -->
+    <div id="example">
+        <p>{{message}}</p>
+        <p>{{reversedMessage}}</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#example",
+            data:{
+                message:"one"
+            },
+            // 所以，对于任何复杂逻辑，你都应当使用计算属性
+            computed:{
+                reversedMessage:function(){
+                    return this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+
+    <!-- 计算属性的缓存
+    计算属性和方法都能实现同样的效果，但是对于方法来说每次调用每次都会重新计算。
+    而对于计算属性来说他天生自带响应式依赖从而来进行缓存，既是当依赖的对象不改变的时候不必重新计算。 -->
+    <div>
+        <div id= 'app-9'>
+            {{firstName}}
+            {{lastName}}
+            {{fullName}}
+        </div>
+    </div>
+    
+    <div id="watch-example">
+        <p>
+            Ask a yes/no question:
+            <input v-model = "question">
+        </p>
+        <p>{{answer}}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+    <script>
+        var watchExampleVM = new Vue({
+            el:'#watch-example',
+            data:{
+                question:'',
+                answer:'I cannot give you an answer until you ask a question!'
+            },
+            watch:{
+                question:function(newQuestion,oldQuestion){
+                    this.answer= 'Waiting for you to stop typing...'
+                    this.debouncedGetAnswer()
+                }
+            },
+            created:function(){
+                this.debouncedGetAnswer = _.debounce(this.getAnswer,500)
+            },
+            methods:{
+                getAnswer:function(){
+                    if(this.question.indexOf('?') ===-1){
+                        this.answer = 'Questions usually contain a question mark. ;-)'
+                        return;
+                    }
+                    this.answer = 'Thinking...'
+                    var vm = this;
+                    axios.get('https://yesno.wtf/api').then(function(response){
+                        vm.answer = _.capitalize(response.data.answer)
+                    })
+                    .catch(function(error){
+                        vm.answer='Error! Could not reach the API. ' + error
+                    })
+                }
+            }
+        })
+
+        var vm = new Vue({
+            el:'#app-9',
+            data:{
+                firstName:'tong',
+                lastName:'yuan',
+                fullName:'tong yuan',
+                datalist:[
+                    {key:1},
+                    {key:2},
+                    {key:3}
+                ]
+            },
+            computed:{
+                AddMethod:function(){
+                    return this.datalist[0]+1;
+                },
+                GetTime:function(){
+                    return Data.now();
+                }
+            },
+            watch:{
+                firstName:function(val){
+                    this.fullName = this.firstName + ' '+ this.lastName;
+                },
+                lastName:function(val){
+                    this.fullName = this.firstName + ' '+ val ;
+                }
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>

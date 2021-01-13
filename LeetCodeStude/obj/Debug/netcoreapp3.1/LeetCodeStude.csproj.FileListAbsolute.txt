@@ -1,0 +1,13 @@
+D:\Code\StudyCode\LeetCodeStude\bin\Debug\netcoreapp3.1\LeetCodeStude.exe
+D:\Code\StudyCode\LeetCodeStude\bin\Debug\netcoreapp3.1\LeetCodeStude.deps.json
+D:\Code\StudyCode\LeetCodeStude\bin\Debug\netcoreapp3.1\LeetCodeStude.runtimeconfig.json
+D:\Code\StudyCode\LeetCodeStude\bin\Debug\netcoreapp3.1\LeetCodeStude.runtimeconfig.dev.json
+D:\Code\StudyCode\LeetCodeStude\bin\Debug\netcoreapp3.1\LeetCodeStude.dll
+D:\Code\StudyCode\LeetCodeStude\bin\Debug\netcoreapp3.1\LeetCodeStude.pdb
+D:\Code\StudyCode\LeetCodeStude\obj\Debug\netcoreapp3.1\LeetCodeStude.csprojAssemblyReference.cache
+D:\Code\StudyCode\LeetCodeStude\obj\Debug\netcoreapp3.1\LeetCodeStude.AssemblyInfoInputs.cache
+D:\Code\StudyCode\LeetCodeStude\obj\Debug\netcoreapp3.1\LeetCodeStude.AssemblyInfo.cs
+D:\Code\StudyCode\LeetCodeStude\obj\Debug\netcoreapp3.1\LeetCodeStude.csproj.CoreCompileInputs.cache
+D:\Code\StudyCode\LeetCodeStude\obj\Debug\netcoreapp3.1\LeetCodeStude.dll
+D:\Code\StudyCode\LeetCodeStude\obj\Debug\netcoreapp3.1\LeetCodeStude.pdb
+D:\Code\StudyCode\LeetCodeStude\obj\Debug\netcoreapp3.1\LeetCodeStude.genruntimeconfig.cache
